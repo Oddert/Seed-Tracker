@@ -1,13 +1,10 @@
-site_name: PCF Dashboard
-site_description: Dashboard abstraction layer for PCF clusters displaying instance status information to end users.
+site_name: Seed Tracker
+site_description: Seed inventory system.
 docs_dir: 'docs'
-site_author: 'Robyn Veitch'
+site_author: 'Robyn F H Veitch'
 nav:
   - Home: index.md
-  - Architecture: architecture.md
-  - Database: database.md
-  - Resource Based Access Control: rbac.md
-  - Websockets: websockets.md
+  - Database Structure: database-structure.md
   
 theme:
   name: 'material'
