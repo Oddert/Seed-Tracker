@@ -16,7 +16,7 @@ Tracking inventory, purchasing new inventory, and planning tasks ahead are all o
 
 Designed to incorporate some latest best practice and data design ideas, this project looks to resolve common issues with other garden-planing and task apps though a number of strategies.
 
-### Eternal Brain
+### External Brain
 
 If implemented well, this application should function like an intelligent database, helping the user understand what they've got, what they need, and what's possible, without taking away from the intangibility, intuition, and physicality of actually planting and doing.
 
