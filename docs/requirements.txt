@@ -1,0 +1,3 @@
+mkdocs
+mkdocs-drawio
+mkdocs-material===9.5.50

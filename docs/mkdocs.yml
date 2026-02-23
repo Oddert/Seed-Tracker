@@ -1,0 +1,71 @@
+site_name: PCF Dashboard
+site_description: Dashboard abstraction layer for PCF clusters displaying instance status information to end users.
+docs_dir: 'docs'
+site_author: 'Robyn Veitch'
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Database: database.md
+  - Resource Based Access Control: rbac.md
+  - Websockets: websockets.md
+  
+theme:
+  name: 'material'
+  features:
+    - navigation.sections
+    - navigation.path
+    - navigation.instant
+  include_sidebar: true
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# extra_css:
+  # - stylesheets/extra.css
+  # - stylesheets/mermaid-panzoom.css
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+  - admonition
+  - codehilite:
+      css_class: code
+      use_pygments: false
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - md_in_html
+
+plugins:
+  - drawio
+
+extra_javascript:
+  # - ../javascript/drawio.reload.js
+  - https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js
+  # - ../javascript/mermaid-panzoom.js
