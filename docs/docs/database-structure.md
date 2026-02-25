@@ -268,3 +268,248 @@ erDiagram
     %%     range_id uuid FK "range.range_id"
     %% }
 ```
+
+## Proposed Redesign from LLM Recommendations
+
+[ER Diagram](https://mermaid.live/edit#pako:eNqtWFtv6jgQ_itWpCN1pVL1AocWaR-qkLYISlCgu2KFFLmJC94GJ-s43XIK_30dO4E4cdpoS18axuO5fjMe-8PwQh8ZPePHD9BqtRaE__dC8oKXPfENQAA3YcJ6AAWvgiK4EO1juKRwvSCC-Pv__RO7TduxwMQezR9tZ_IwMIE1ng1mc_Bo963Rd-VzYwnDbAM-FoS7A5IE-0CSXP41GUpyzCgmy3yBbSIEFkYUQMLAFrxBiuVXREM_8djCkLsYXqOYwXUEPIogQ74L2YLsUq1yr17pwpgMwd0wl5LpFjtcAtdIIfso9iiOGA5JJjo3p5FwsSpFH3juVK8zgU10ZwFoptvnIQHoPcIUxZJCkjWi2OMYi5kb8S9VnyB7CaWIeJtMY5a-7bbV2m6lJ6DHNeE4VaOu5pGpW8-tP6xnKebL4YeyfQXF-hHgPRj_wQFtO3Mwsvr3lgNOrJTQmtpPjmn1wXRmm0Mwc27N4WB8_9v3AY_JG3c7pBzHFJIYemn-lIwV6MUikNlMNxdBIhEkI6fBUJ7SfxIo13wUMPhlfXw7rCKIYGTf3_OoHaFLpG6rsM4DoYanrogke9o5FDIJWQ7-QzRCT4C8EI4CTjkQpTEpDOPk-W8kG05moxsjnZ2cqulnlYrOzBE6nyn2l8htIPWuFiA71a7M_ork1BVRjsKxr7iOgA57MhgP7DE4GY7tP0XdgdHt3HKOUF5hhEm5oDJac7TEYUJLzQ_6b_t--EnhqEjJjUlDJ7v1M8oaV24TZFz-c8Jbsc7i_WrF9oJPJeMPew5wz9tA9t99g0Gi-sfQO9OQE4Jz13JnVN8KDhy3MZtzczQwb0fAuR1zfBxp3OCtdamGWlCU4lzDIMC8EHiKKXN9uHHDF3eDIC2tI-JrVmXcfoVEDeQKrXEcrRBFan3nYawapsmwanAp75Iuc65LmFZhXtTyVxPOI6R2aj5Y_acRPxnAdD6dWY_fz2vsrZCfBNx_GL-qpyknaHqvIH8-UhUbAoMsyQ6K5zAMECSAoogXf6zmQNBcjg5EeTGlZQ83238Ret2uQ8JWWwGU0mRJcUh50_iyt-x9XNIwiRQnBUXjpaQf3Mxtx7GbDhhvJTAKDSKEGh15IBUw7hXvjxs1EyqiKvJzUJVca7irpMylKICVaSpAL8zV2k7xclVd2mdSyioWlNa1GhNSG1PVincN9wnDSg7KWHydkOqZVsg5xzbDHgz4FBg18inTuh8QlNOtjquSlkpr06ejaV9rEs765vYZY2nqqvQS_fRd9OYwcWnnKCGxAnpNpWjYj9B4HwaWc-uYD_Os74KTmfNk8duNZfGLjvNkzp4c6whD2AojCqm3Sq8bL_wQqRTlgVw7Fu9UQST0VQylhMpUpMpV70iQpiHNt-mqQ1xtWUV1wYcsSSWz8gyVyPXM0pbs2iALds9Vc3lXfCk6obuglEV-bmAt-2FK1VtXN6FUzKsZHZsaWM9_hJqYOHafAx-Y9njG76zT76M_v43rXoLqb-piOX_r-foiX3rxySJVVp3Haf9G9jmbcWosef8xeowm6NTgGtcw_WkIFxYG41MsWhjiOgPpa7plx_dEkPwVhut8Gz-jlyuj9wKDmP9KovShKXuR3LPw2RlRM0wIM3oX5z-vhRCj92G8G71W5_r87OrynJOvOjdX3c6pseFc3cuzzkW33T7v3nSub67b7d2p8UuovTxrX3Y75xcX1zdX7e7lxc9TA_mYhfRRPp-KV9Tdf92sBsQ)
+
+```mermaid
+%% ---
+%% config:
+%%   layout: elk
+%% ---
+erDiagram
+
+%% =========================================================
+%% CORE POLYMORPHIC ENTITY MODEL
+%% =========================================================
+
+entity {
+    uuid entity_id PK
+    string entity_type "plant | variant | product"
+    timestamp created_at
+}
+
+plant {
+    uuid entity_id "PK FK"
+    string plant_name
+    string description
+}
+
+variant {
+    uuid entity_id "PK FK"
+    uuid plant_entity_id FK
+    string variant_name
+    string description
+}
+
+product {
+    uuid entity_id "PK FK"
+    date expires
+    numeric cost_price
+    string cost_currency
+}
+
+entity ||--|| plant : "is"
+entity ||--|| variant : "is"
+entity ||--|| product : "is"
+plant ||--o{ variant : "has"
+
+%% =========================================================
+%% INVENTORY LEDGER (EVENT-SOURCED STOCK TRACKING)
+%% =========================================================
+
+inventory_transaction {
+    uuid transaction_id PK
+    uuid event_id FK
+    uuid product_entity_id FK
+    numeric quantity_delta
+    timestamp created_at
+}
+
+%% =========================================================
+%% EVENT LOGGING
+%% =========================================================
+
+event {
+    uuid event_id PK
+    uuid entity_id FK
+    string event_type
+    string notes
+    timestamp occurred_at
+}
+
+entity ||--o{ event : "subject"
+
+event_set {
+    uuid event_set_id PK
+    string name
+    string notes
+}
+
+bridge_event_set {
+    uuid event_set_id FK
+    uuid event_id FK
+}
+
+event_set ||--o{ bridge_event_set : ""
+event ||--o{ bridge_event_set : ""
+
+%% =========================================================
+%% OPINION (KNOWLEDGE LAYER)
+%% =========================================================
+
+opinion {
+    uuid opinion_id PK
+    uuid entity_id FK
+    string source
+    string advice
+    timestamp created_at
+}
+
+entity ||--o{ opinion : "describes"
+
+opinion_attribute {
+    uuid opinion_attribute_id PK
+    uuid opinion_id FK
+    string attribute_type
+    numeric numeric_value
+    string text_value
+    string unit
+}
+
+opinion ||--o{ opinion_attribute : "has"
+
+%% =========================================================
+%% CYCLICAL RANGE MODEL
+%% =========================================================
+
+range {
+    uuid range_id PK
+    smallint start_day_of_year
+    smallint end_day_of_year
+    string zone
+    string hemisphere
+}
+
+bridge_opinion_range {
+    uuid opinion_id FK
+    uuid range_id FK
+    string range_type
+}
+
+opinion ||--o{ bridge_opinion_range : ""
+range ||--o{ bridge_opinion_range : ""
+
+%% =========================================================
+%% SCHEDULING SYSTEM
+%% =========================================================
+
+schedule_task {
+    uuid task_id PK
+    string task_name
+    string description
+    string status
+    boolean repeats
+    string repeat_interval "day|week|month|year"
+    string priority
+    timestamp created_at
+}
+
+schedule_group {
+    uuid group_id PK
+    string group_name
+    boolean is_active
+}
+
+bridge_sched_task_group {
+    uuid task_id FK
+    uuid group_id FK
+}
+
+schedule_task ||--o{ bridge_sched_task_group : ""
+schedule_group ||--o{ bridge_sched_task_group : ""
+
+schedule_task_relation {
+    uuid left_task_id FK
+    uuid right_task_id FK
+    string relation_type
+}
+
+schedule_task ||--o{ schedule_task_relation : "left"
+schedule_task ||--o{ schedule_task_relation : "right"
+
+schedule_bridge {
+    uuid task_id FK
+    uuid entity_id FK
+    boolean is_critical_dep
+}
+
+schedule_task ||--o{ schedule_bridge : ""
+entity ||--o{ schedule_bridge : ""
+
+schedule_task_range {
+    uuid task_id FK
+    uuid range_id FK
+    string range_type
+}
+
+schedule_task ||--o{ schedule_task_range : ""
+range ||--o{ schedule_task_range : ""
+
+bridge_event_task {
+    uuid event_id FK
+    uuid task_id FK
+}
+
+event ||--o{ bridge_event_task : ""
+schedule_task ||--o{ bridge_event_task : ""
+
+%% =========================================================
+%% HIERARCHY SYSTEM (TRUE TREE STRUCTURE)
+%% =========================================================
+
+hierarchy_definition {
+    uuid definition_id PK
+    string name
+}
+
+hierarchy_node {
+    uuid node_id PK
+    uuid definition_id FK
+    uuid parent_node_id FK
+    boolean is_current
+}
+
+hierarchy_definition ||--o{ hierarchy_node : ""
+hierarchy_node ||--o{ hierarchy_node : "parent"
+
+entity_hierarchy {
+    uuid entity_id FK
+    uuid node_id FK
+}
+
+entity ||--o{ entity_hierarchy : ""
+hierarchy_node ||--o{ entity_hierarchy : ""
+
+opinion_hierarchy {
+    uuid opinion_id FK
+    uuid node_id FK
+}
+
+opinion ||--o{ opinion_hierarchy : ""
+hierarchy_node ||--o{ opinion_hierarchy : ""
+
+%% =========================================================
+%% PRODUCT CONTENTS
+%% =========================================================
+
+product_variant {
+    uuid product_entity_id FK
+    uuid variant_entity_id FK
+    numeric quantity
+}
+
+product ||--o{ product_variant : ""
+variant ||--o{ product_variant : ""
+```
