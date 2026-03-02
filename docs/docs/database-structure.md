@@ -271,13 +271,12 @@ erDiagram
 
 ## Proposed Redesign from LLM Recommendations
 
-[ER Diagram](https://mermaid.live/edit#pako:eNqtWFtv6jgQ_itWpCN1pVL1AocWaR-qkLYISlCgu2KFFLmJC94GJ-s43XIK_30dO4E4cdpoS18axuO5fjMe-8PwQh8ZPePHD9BqtRaE__dC8oKXPfENQAA3YcJ6AAWvgiK4EO1juKRwvSCC-Pv__RO7TduxwMQezR9tZ_IwMIE1ng1mc_Bo963Rd-VzYwnDbAM-FoS7A5IE-0CSXP41GUpyzCgmy3yBbSIEFkYUQMLAFrxBiuVXREM_8djCkLsYXqOYwXUEPIogQ74L2YLsUq1yr17pwpgMwd0wl5LpFjtcAtdIIfso9iiOGA5JJjo3p5FwsSpFH3juVK8zgU10ZwFoptvnIQHoPcIUxZJCkjWi2OMYi5kb8S9VnyB7CaWIeJtMY5a-7bbV2m6lJ6DHNeE4VaOu5pGpW8-tP6xnKebL4YeyfQXF-hHgPRj_wQFtO3Mwsvr3lgNOrJTQmtpPjmn1wXRmm0Mwc27N4WB8_9v3AY_JG3c7pBzHFJIYemn-lIwV6MUikNlMNxdBIhEkI6fBUJ7SfxIo13wUMPhlfXw7rCKIYGTf3_OoHaFLpG6rsM4DoYanrogke9o5FDIJWQ7-QzRCT4C8EI4CTjkQpTEpDOPk-W8kG05moxsjnZ2cqulnlYrOzBE6nyn2l8htIPWuFiA71a7M_ork1BVRjsKxr7iOgA57MhgP7DE4GY7tP0XdgdHt3HKOUF5hhEm5oDJac7TEYUJLzQ_6b_t--EnhqEjJjUlDJ7v1M8oaV24TZFz-c8Jbsc7i_WrF9oJPJeMPew5wz9tA9t99g0Gi-sfQO9OQE4Jz13JnVN8KDhy3MZtzczQwb0fAuR1zfBxp3OCtdamGWlCU4lzDIMC8EHiKKXN9uHHDF3eDIC2tI-JrVmXcfoVEDeQKrXEcrRBFan3nYawapsmwanAp75Iuc65LmFZhXtTyVxPOI6R2aj5Y_acRPxnAdD6dWY_fz2vsrZCfBNx_GL-qpyknaHqvIH8-UhUbAoMsyQ6K5zAMECSAoogXf6zmQNBcjg5EeTGlZQ83238Ret2uQ8JWWwGU0mRJcUh50_iyt-x9XNIwiRQnBUXjpaQf3Mxtx7GbDhhvJTAKDSKEGh15IBUw7hXvjxs1EyqiKvJzUJVca7irpMylKICVaSpAL8zV2k7xclVd2mdSyioWlNa1GhNSG1PVincN9wnDSg7KWHydkOqZVsg5xzbDHgz4FBg18inTuh8QlNOtjquSlkpr06ejaV9rEs765vYZY2nqqvQS_fRd9OYwcWnnKCGxAnpNpWjYj9B4HwaWc-uYD_Os74KTmfNk8duNZfGLjvNkzp4c6whD2AojCqm3Sq8bL_wQqRTlgVw7Fu9UQST0VQylhMpUpMpV70iQpiHNt-mqQ1xtWUV1wYcsSSWz8gyVyPXM0pbs2iALds9Vc3lXfCk6obuglEV-bmAt-2FK1VtXN6FUzKsZHZsaWM9_hJqYOHafAx-Y9njG76zT76M_v43rXoLqb-piOX_r-foiX3rxySJVVp3Haf9G9jmbcWosef8xeowm6NTgGtcw_WkIFxYG41MsWhjiOgPpa7plx_dEkPwVhut8Gz-jlyuj9wKDmP9KovShKXuR3LPw2RlRM0wIM3oX5z-vhRCj92G8G71W5_r87OrynJOvOjdX3c6pseFc3cuzzkW33T7v3nSub67b7d2p8UuovTxrX3Y75xcX1zdX7e7lxc9TA_mYhfRRPp-KV9Tdf92sBsQ)
+[ER Diagram](https://mermaid.live/edit#pako:eNrVWW1v4jgQ_itWpFX3JFjRLaU9pPtQ0WyLSqFK6Z04IUUmMeBrsHOOwy5b-t93YicQ56VFV77cflhgPLbn5XnGY_fF8rhPrK7VbDanzONsThfdKUMowBseyy4iwfOUqUEirileCLyasin79An98V__qdm9kWOjh9Fgcj9yHm77PWQPx_3xBN2Pru3BR9cHY5mkcoNeElcQimPqIy1y4dvDnRZHUlC2yAbkJiRoaoUBZhJt0RoLqr-FgvuxJ6eWniXpikQSr0LkCYIl8V0sp-w12VXPrd50aj3coW932Srp3mqGy_CKGGKfRJ6goaScGXIchkRg5pnaLIZPravMyEw_yBA1qs3Y63wzI5QueGw708AeZqcPoUbkR0gFibSExSsiqIc8Hkk3hG_mbkrsxUIQ5m12M2ZEoBB7zwTGeAxBmlo-meM4kKiVbWWqfSd0sSzpveZQtt02m9utDiLqgiaNEhVzNEtK3XgWjP14ikQY5i_G9CVW40dgYX_4J_Bu5EzQwL6-sR302U4EzcfRk9Ozr9HjeNS7Q2PnqnfXH9789nFeUrYGt7kAugE-IuwlcDAAkJPnuarBkUzO41ODV0euAr4ZQv6NsR7zSSDxuzSuNjJNhLIhn4Y3tfNZPV7aVJLQYHRzA1k5QrFULr1UBdoMf1190OpJATX5zmXG1X20uac4mQt3jgdGfKN49g_RdTe10Y1IlZ0grSjrpWKVmqP2nAnqL4h7wKrfagH4atqV2l9aOXFF0V059p7WEdAxeugP-6Mh-nw3HP2leI0GVxPbOQJ9eUhZkbCp7HC0RDwWhVqN_XWxfMcREW4lgkp8NQGU2dhVJTs5n2YkJV5mKpawxyyGA6XKkd1oyaWcqwWf9nP2LMiqT_rprnEQmz5K8kNWiGNGM9cyZ0zfcg4ct7D0Jr1Bv3c1QM7VEGBzpGYMyuLCDLWSGJxd4SCgwA9IsZCujzcun7sbgkVhnDC_YlTH7SdnZiCXZEWjcEmEKYYOggexKtMAEbzZfifkeTvnQrLkqN-uOJPLbURwBK2KZVaMLANlnyrAYfpagIyWp12nF8vmDPqNBvLpmvoEPrlYwanVQAsiVs0E_Q09fYnFGpjQQCu-Bj3VJTQp8zkXUaqiZdC_ayGcQjEDVXU-qbFUL4LjCTaWvJkuuvO2gLtK57OSpX8donkEhD72bu3rpwGce-hx8ji27z8Oz8hbEj8OIBc4ejZ7ERBUnCxKfHAvDIiWcVrEZpwHBDNAYAg1rCCkkZs0D-siWBNVF7BPBJSKPGI1TqG5ETC2VXQo3C4E5dBxb96toLsQLAAQoREDJakIgpbvo1DhRZ43agcV4Yo9sjgbvNltvDtrzUSZgCutn2Gu4NqBswqbuYIEuNSqBmQu3UrbRVJHSkO7jOq1Mu6f-JBi5kdNzk4a6ISzZhR7Homi9Ncc0yD96iV3quBkR9PKiNRYnriWWGwE5cB5yp9CXHQI389juQ_IQcVLLoQeDqAzDw_yKd1111QZR3-dVimbpeJdncX_Y-U-JLX15fstxULXXKqW1bezfGT3HXNlH6xWLPG2guwV6kc4Wm77tnPl9G4n6cmCPo-dJxtuv7YNF2HnqTd-cuwjNNFLSgQW3jK5js7hmCzVlb249lrzai7EuG_iORGU2ldzXfMOjUUS0mzaHvC6G4NGU_23fwSJNpGSQIcODW4QZCeP7s9S_TLd1XOMLNmfC0Sa6YJvWZoL4npl7VB6d9QVaKdV8-BkBCQfiapbanHJtw2sVd_fSaqtq2sqS-bVXBQONbBe_wjEenBG18Ae1BsNx_Zw_PhxCmVPPlUvnfXPQWo4e8t8_7Wo8Eppvui4-Qe5JE679-K31ayGtYAiZnWliEnDgh1XOPlpKRemloQ7C5la6vKKxbMq6zAnxOxvzlfZNCj-i6XVneMggl9xmJAtfZ3fqQATieglb5xW97Rz3laLWN0X64fVbZ52Wl8u2q2LzmX77Gvn9OJrw9pY3fPOl8tWq9U-Pf398uKs1b54bVg_1banXy47rdb5WavTbnfOL7-enTcs4lPJxb3--4H6M8LrL6tzGDk)
 
-```mermaid
-%% ---
-%% config:
-%%   layout: elk
-%% ---
+```mermaid---
+config:
+  layout: elk
+---
 erDiagram
 
 %% =========================================================
@@ -294,6 +293,8 @@ plant {
     uuid entity_id "PK FK"
     string plant_name
     string description
+    string apperance
+    string nutrition
 }
 
 variant {
@@ -301,6 +302,8 @@ variant {
     uuid plant_entity_id FK
     string variant_name
     string description
+    string apperance
+    string nutrition
 }
 
 product {
@@ -308,6 +311,8 @@ product {
     date expires
     numeric cost_price
     string cost_currency
+    number packet_count "default 0"
+    number packet_weight "default 0"
 }
 
 entity ||--|| plant : "is"
@@ -326,6 +331,9 @@ inventory_transaction {
     numeric quantity_delta
     timestamp created_at
 }
+
+inventory_transaction ||--o{ event : "has"
+inventory_transaction ||--o{ product : "has"
 
 %% =========================================================
 %% EVENT LOGGING
@@ -364,6 +372,7 @@ opinion {
     uuid entity_id FK
     string source
     string advice
+    string user_notes
     timestamp created_at
 }
 
@@ -390,12 +399,16 @@ range {
     smallint end_day_of_year
     string zone
     string hemisphere
+    string resolution "day|week|fortnight|month|season"
 }
 
 bridge_opinion_range {
     uuid opinion_id FK
     uuid range_id FK
-    string range_type
+    string range_type "cut-back, divide, dormant, germ-time,
+    harvest, move, plant-indoors,
+    plant-outdoors, prune, transplant,
+    sprout-to-harvest"
 }
 
 opinion ||--o{ bridge_opinion_range : ""
@@ -411,7 +424,8 @@ schedule_task {
     string description
     string status
     boolean repeats
-    string repeat_interval "day|week|month|year"
+    boolean is_active
+    string repeat_interval "day|week|month|quarter|year"
     string priority
     timestamp created_at
 }
@@ -433,7 +447,7 @@ schedule_group ||--o{ bridge_sched_task_group : ""
 schedule_task_relation {
     uuid left_task_id FK
     uuid right_task_id FK
-    string relation_type
+    string relation_type "'depends-on', 'on-success', 'on-fail', 'on-cancel'"
 }
 
 schedule_task ||--o{ schedule_task_relation : "left"
@@ -451,7 +465,10 @@ entity ||--o{ schedule_bridge : ""
 schedule_task_range {
     uuid task_id FK
     uuid range_id FK
-    string range_type
+    string range_type "cut-back, divide, dormant, germ-time,
+    harvest, move, plant-indoors,
+    plant-outdoors, prune, transplant,
+    sprout-to-harvest"
 }
 
 schedule_task ||--o{ schedule_task_range : ""
@@ -478,6 +495,8 @@ hierarchy_node {
     uuid node_id PK
     uuid definition_id FK
     uuid parent_node_id FK
+    start_date date "default sysdate not null"
+    end_date date
     boolean is_current
 }
 
